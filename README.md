@@ -8,4 +8,5 @@
 - remover item  no meio da lista O(n)
 - encontrar um item na lista linkada O(n), mesmo que seja por index ou por valor
 
-![image.png](https://prod-files-secure.s3.us-west-2.amazonaws.com/9f0f2ddb-2a61-4a12-a84e-1a80fa4dc84e/bd46f802-4c43-4755-b618-3a5f17d70268/image.png)
+![image](https://github.com/user-attachments/assets/b228ef9e-d854-41a1-8d4e-17183020b82f)
+
