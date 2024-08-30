@@ -1,5 +1,5 @@
 export class Node<T> {
-    value : T;
+    value : T | null;
     next: Node<T> | null;
     constructor(value: T) {
         this.value = value;

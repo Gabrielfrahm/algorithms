@@ -153,4 +153,133 @@ describe("Deve testa uma lista encadeada", () => {
     expect(ll.getLength()).toBe(0)
     expect(ll.shift()).toBeUndefined()
   })
+
+  test("deve retorna um item da lista encadeada pelo index GET", () => {
+    const ll = new LinkedList<{
+      name: string;
+      url: string;
+    }>({
+      name: "music-name",
+      url: "music-url"
+    });
+    ll.push({
+      name: "music-name-2",
+      url: "music-url-2"
+    });
+    expect(ll.get(0)).toMatchObject({
+      value:{
+        name: "music-name",
+        url: "music-url"
+      },
+    });
+    expect(ll.get(1)).toMatchObject({
+      value:{
+        name: "music-name-2",
+        url: "music-url-2"
+      },
+    });
+    expect(ll.get(3)).toBeUndefined()
+    expect(ll.get(-1)).toBeUndefined()
+  })
+
+  test("deve setar um item na lista pelo index SET", () => {
+    const ll = new LinkedList<{
+      name: string;
+      url: string;
+    }>({
+      name: "music-name",
+      url: "music-url"
+    });
+    ll.push({
+      name: "music-name-2",
+      url: "music-url-2"
+    });
+    expect(ll.set(1, {
+      name: "music-name-3",
+      url: "music-url-3"
+    })).toBeTruthy()
+    expect(ll.set(3, {
+      name: "music-name-3",
+      url: "music-url-3"
+    })).toBeFalsy()
+    expect(ll.set(-1, {
+      name: "music-name-3",
+      url: "music-url-3"
+    })).toBeFalsy()
+    expect(ll.getTail()).toMatchObject({
+      value:{
+        name: "music-name-3",
+        url: "music-url-3"
+      },
+    })
+  })
+
+  test("deve inserir um item em um index especifico INSERT", () =>{
+    const ll = new LinkedList<{
+      name: string;
+      url: string;
+    }>({
+      name: "music-name",
+      url: "music-url"
+    });
+    ll.push({
+      name: "music-name-2",
+      url: "music-url-2"
+    });
+    expect(ll.insert(1, {
+      name: "music-name-3",
+      url: "music-url-3"
+    })).toBeTruthy()
+
+    expect(ll.get(2)).toMatchObject({
+      value: {
+        name: "music-name-3",
+        url: "music-url-3"
+      }
+    })
+    expect(ll.getLength()).toBe(3)
+  })
+
+  test("deve remover um item da lista pelo index REMOVE", () => {
+    const ll = new LinkedList<{
+      name: string;
+      url: string;
+    }>({
+      name: "music-name",
+      url: "music-url"
+    });
+    ll.push({
+      name: "music-name-2",
+      url: "music-url-2"
+    });
+    ll.remove(1);
+    expect(ll.getLength()).toBe(1)
+  })
+
+  test("deve inverter a lista REVERSE", () => {
+    const ll = new LinkedList<{
+      name: string;
+      url: string;
+    }>({
+      name: "music-name",
+      url: "music-url"
+    });
+    ll.push({
+      name: "music-name-2",
+      url: "music-url-2"
+    });
+    ll.reverse()
+    expect(ll.getHead()).toMatchObject({
+      value: {
+        name: "music-name-2",
+        url: "music-url-2"
+      }
+    })
+    expect(ll.getTail()).toMatchObject({
+      value: {
+        name: "music-name",
+        url: "music-url"
+      }
+    })
+  })
 })
