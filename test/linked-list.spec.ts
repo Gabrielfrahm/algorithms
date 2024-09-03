@@ -231,7 +231,7 @@ describe("Deve testa uma lista encadeada", () => {
       url: "music-url-3"
     })).toBeTruthy()
 
-    expect(ll.get(2)).toMatchObject({
+    expect(ll.get(1)).toMatchObject({
       value: {
         name: "music-name-3",
         url: "music-url-3"
@@ -268,7 +268,7 @@ describe("Deve testa uma lista encadeada", () => {
       name: "music-name-2",
       url: "music-url-2"
     });
-    ll.reverse()
+    ll.reverse2()
     expect(ll.getHead()).toMatchObject({
       value: {
         name: "music-name-2",
