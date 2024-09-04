@@ -165,4 +165,17 @@ export class LinkedList<T> {
       this.head = first;
       return this;
     }
+
+    reverse3(){
+      let newNode = null;
+      this.tail = this.head;
+      while(this.head){
+        const temp = this.head.next;
+        this.head.next = newNode;
+        newNode = this.head;
+        this.head = temp;
+      }
+      this.head = newNode;
+      return this;
+    }
 }
