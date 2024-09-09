@@ -6,7 +6,6 @@ export class Node<T> {
       this.next = null;
   }
 }
-
 export class Queue<T> {
   first: Node<T> | null;
   last: Node<T> | null;
@@ -33,6 +32,7 @@ export class Queue<T> {
     this.length++;
     return this;
   }
+
   dequeue() {
     if(!this.first) return null;
     if(this.length === 1) {
@@ -42,6 +42,8 @@ export class Queue<T> {
     this.length--;
     return this;
   }
+
+
 
   //isEmpty;
 }

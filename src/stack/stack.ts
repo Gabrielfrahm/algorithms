@@ -47,6 +47,8 @@ export class Stack<T> {
     return this;
   }
 
+
+
   //isEmpty
   isEmpty(): boolean {
     if(this.length === 0) return true
