@@ -1,5 +1,5 @@
-import { LinkedList } from "../src/linked-list/linked-list"
-import { Node } from "../src/linked-list/node";
+import { LinkedList } from "../src/data/linked-list/linked-list"
+import { Node } from "../src/data/linked-list/node";
 
 describe("Deve testa uma lista encadeada", () => {
   test("Deve  retorna o head da lista corretamente", () => {

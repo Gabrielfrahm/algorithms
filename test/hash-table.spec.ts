@@ -1,4 +1,4 @@
-import { HashTable } from "../src/hash-table/hash-table"
+import { HashTable } from "../src/data/hash-table/hash-table"
 
 describe("Deve testar hash table", () => {
   let hashTable: HashTable;

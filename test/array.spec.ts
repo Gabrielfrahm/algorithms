@@ -1,4 +1,4 @@
-import { MyArray } from "../src/array/array"
+import { MyArray } from "../src/data/array/array"
 
 describe("Deve testar Arrays", () => {
   test("GET", () => {

@@ -1,4 +1,4 @@
-import { BinarySearchTree } from "../src/trees/trees";
+import { BinarySearchTree } from "../src/data/trees/trees";
 
 describe('BinarySearchTree', () => {
   let bst : BinarySearchTree<number>;
@@ -33,7 +33,7 @@ describe('BinarySearchTree', () => {
     expect(bst.traverse(bst.root)).toEqual(expectedTree);
   });
 
-  test('Deve olhar  um valor da  lista', () => {
+  test('Deve olhar um valor da arvore', () => {
     bst.insert(9);
     bst.insert(4);
     bst.insert(6);
@@ -49,7 +49,7 @@ describe('BinarySearchTree', () => {
     })
   });
 
-  test('Deve olhar  um valor da  lista', () => {
+  test('Deve remover um valor da arvore', () => {
     bst.insert(9);
     bst.insert(4);
     bst.insert(6);
@@ -59,9 +59,8 @@ describe('BinarySearchTree', () => {
     bst.insert(1);
     console.log(bst.traverse(bst.root))
 
-    bst.remove(6)
+    bst.remove(4)
     console.log(bst.traverse(bst.root))
 
   });
-
 });
